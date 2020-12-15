@@ -1,0 +1,39 @@
+﻿<Window x:Class="IPCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPCalculator"
+        mc:Ignorable="d"
+        Title="IPCalculator" Height="500" Width="275" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Center">
+        <Label Content="IP" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.133,0.756"/>
+        <StackPanel x:Name="userIP" Margin="11,36,10.333,406" Orientation="Horizontal" HorizontalAlignment="Center" Width="248">
+            <TextBox HorizontalAlignment="center" Height="20" Margin="16,0,5,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="0"/>
+            <TextBox HorizontalAlignment="center" Height="20" Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="1"/>
+            <TextBox HorizontalAlignment="center" Height="20" Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="2"/>
+            <TextBox HorizontalAlignment="center" Height="20" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="3"/>
+        </StackPanel>
+        <Label Content="Netmask" HorizontalAlignment="Left" Margin="26,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.074,0.5"/>
+        <StackPanel x:Name="userNetmask" Margin="10,85,11.333,357" Orientation="Horizontal" HorizontalAlignment="Center" Width="248">
+            <TextBox HorizontalAlignment="center" Height="20" Margin="16,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="4"/>
+            <TextBox HorizontalAlignment="center" Height="20" Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="5"/>
+            <TextBox HorizontalAlignment="center" Height="20" Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="6"/>
+            <TextBox HorizontalAlignment="center" Height="20" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyDown="TextBox_KeyDown" LostFocus="TextBox_LostFocus" KeyUp="TextBox_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" GotFocus="TextBox_GotFocus" TabIndex="7"/>
+        </StackPanel>
+        <Label Content="Netmask length" HorizontalAlignment="Left" Margin="26,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.074,0.5"/>
+        <StackPanel x:Name="userNetmaskLength" Margin="10,134,149.333,308" Orientation="Horizontal" HorizontalAlignment="Center" Width="110">
+            <TextBox x:Name="NetmaskLength" HorizontalAlignment="center" Height="20" Margin="16,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" KeyUp="NetmaskLength_KeyUp" HorizontalContentAlignment="Center" AllowDrop="False" KeyDown="TextBox_KeyDown" GotFocus="TextBox_GotFocus" TabIndex="5"/>
+        </StackPanel>
+        <Label Content="Hosts amount" HorizontalAlignment="Left" Margin="26,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.074,0.5"/>
+        <StackPanel x:Name="userHostsAmt" Margin="10,183,149.333,259" Orientation="Horizontal" HorizontalAlignment="Center" Width="110">
+            <TextBox x:Name="HostsAmt" HorizontalAlignment="center" Height="20" Margin="16,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Center" AllowDrop="False" KeyDown="TextBox_KeyDown" GotFocus="TextBox_GotFocus" TabIndex="5"/>
+        </StackPanel>
+
+        <Button x:Name="CalcButton" Content="Calculate" Margin="75,218,74.333,220" Click="Button_Click" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Height="34" HorizontalAlignment="Center" TabIndex="9"/>
+
+        <ScrollViewer x:Name="log" Height="215" Margin="0,257,0.333,0" VerticalAlignment="Center">
+            <Label x:Name="logText"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
